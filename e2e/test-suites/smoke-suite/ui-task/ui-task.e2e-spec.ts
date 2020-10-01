@@ -345,8 +345,9 @@ describe(SMOKE_TEST_SUITE, () => {
 
         StepLogger.stepId(22);
         StepLogger.step("Note values for payment details as PD1.");
+        const totalValue1 = await BookingFormPage.getTotalSum();
         StepLogger.verification("Values are noted.");
-        const paymentDetails1 = await BookingFormPage.getFormData();
+        const paymentDetails1 = await BookingFormPage.getPaymentDetails();
 
         StepLogger.stepId(23);
         StepLogger.step("Open calendar by “Check-out” field.");
@@ -362,8 +363,9 @@ describe(SMOKE_TEST_SUITE, () => {
 
         StepLogger.stepId(25);
         StepLogger.step("Note values for payment details as PD2.");
+        await BookingFormPage.waitForTotalSumToBeRecalculated(totalValue1);
         StepLogger.verification("Values are noted.");
-        const paymentDetails2 = await BookingFormPage.getFormData();
+        const paymentDetails2 = await BookingFormPage.getPaymentDetails();
 
         StepLogger.stepId(26);
         StepLogger.step("Compare values of PD1 and PD2.");
