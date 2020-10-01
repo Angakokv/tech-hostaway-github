@@ -5,13 +5,13 @@ import {
 
 
 import { TIMEOUT_5 } from "../../../components/timeouts";
+import { DAYS_PARAGRAPH_XPATH_SELECTOR } from "./booking-form-page.constants";
 import { COUPON_APPLICATION_MESSAGE_NAME } from "../../property/property-page.constants";
 
 import * as ElementHelpers from "../../../components/element-helpers";
 import * as ExpectationHelpers from "../../../components/expectation-helpers";
 import * as WaitHelpers from "../../../components/wait-helpers";
 import * as TextBoxHelpers from "../../../components/textbox-helpers";
-import { DAYS_PARAGRAPH_XPATH_SELECTOR } from "./booking-form-page.constants";
 
 /* tslint:disable:member-ordering*/
 export class BookingFormPage {
